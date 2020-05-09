@@ -82,8 +82,10 @@
 ✌️ Voi Class Component: dung HOC connect()
 
 ✌️ Voi Functional Component: dung hooks useSelector() va useDispatch()
+
     🍣 useSelector() : lay state trong Redux store ra use trong Component.
         + tham số đầu tiên của function chính là store state.
+                
                 
     ✌️ Biến State thành properties của Component ✌️
         + const mapStateToProps = (state) => ({
