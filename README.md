@@ -1,7 +1,7 @@
 
 ### REDUX
 
-*** Tản Mạn về thằng Redux ***
+### Tản Mạn về thằng Redux 
 
 - Thư viện quản lý các State.
 - Redux không chỉ dùng với ReactJS mà còn được sử dụng ở nhiều Javascript apps, VueJS, Angular, Swift,...
@@ -10,7 +10,7 @@
 - Ngoài Redux ra còn có 1 số thư viện khác như MobX, Redux thunk, Redux Saga,...
 - Dùng function generator + redux saga, redux thunk để làm phần Middlewares.
 
-    *** BẮT ĐẦU LUYỆN CÔNG ***
+### BẮT ĐẦU LUYỆN CÔNG
 
 - Redux sẽ có 3 thằng lớn là: View - Actions - Store
     + View: phần giao diện, chứa các HTML, CSS (thuần), Angular, ReactJS Component.
@@ -49,11 +49,12 @@
                             description: 'abcasdhodaido'
                         }
                     }
-==> **Action Creator** chính là tham số truyền vào của Action.
-    👉 Action creator sẽ trả về một object với type và payload.
+    **Action Creator** chính là tham số truyền vào của Action.
+👉 Action creator sẽ trả về một object với type và payload.
 
-==> Neu co 1 action thi se co 1 reducer tuong ung.
-    🍣 vi du: 
+==> Nếu có 1 action thì sẽ có 1 reducer tương ứng.
+
+🍣 Ví dụ minh họa: 
     ------------------------------------------------------
     |   + actions                                        |
     |           |__ hobby.js                             |
@@ -63,18 +64,19 @@
     ------------------------------------------------------
 
 📌 Lam sao de Component trong ReactJS co the su dung Store voi Redux❓
-    ✌️ vao ./src/index.js --> setup Store Provider
+
+✌️ vào ./src/index.js --> setup Store Provider
 
 📌 Vậy làm sao để kết nối React với Redux nhỉ❓
-    ✌️ Ta sẽ dùng một thư viện trung gian đó là react-redux -> Library này sẽ take care việc connect component và store để biết được khi nào component được update.
+
+✌️ Ta sẽ dùng một thư viện trung gian đó là react-redux -> Library này sẽ take care việc connect component và store để biết được khi nào component được update.
 
 📌 Connect vào Redux tu ReactJS Component❓
-    ✌️ Voi Class Component: dung HOC connect()
-    ✌️ Voi Functional Component: dung hooks useSelector() va useDispatch()
-        🍣 useSelector() : lay state trong Redux store ra use trong Component.
-            + tham số đầu tiên của function chính là store state.
+✌️ Voi Class Component: dung HOC connect()
+✌️ Voi Functional Component: dung hooks useSelector() va useDispatch()
+    🍣 useSelector() : lay state trong Redux store ra use trong Component.
+        + tham số đầu tiên của function chính là store state.
                 
-
     ✌️ Biến State thành properties của Component ✌️
         + const mapStateToProps = (state) => ({
             state_name: state.reducer_name;
@@ -89,20 +91,20 @@
 ==> Flow: **Actions -> Reducer -> Store -> View**
 
 📌 Giải thích Flow: 
-    + trên View thì Users sẽ click vào nút sự kiện (tạo baiviet chẳng hạn) thì Action sẽ được dispatch (chuyển) đến Reducer để xử lý.
-    + trong Reducer, sẽ tạo 1 Global State (state chứa tất cả baiviet) -> để xử lý từng Action thì use lệnh điều kiện (if/else - switch/case) trỏ đến các type tương ứng trong Actions => xử lý xong => trả ra State mới.
-    + Reducer sẽ connect với Store cần combine tất cả reducer lại => chuyển State mới ra View
-    + View tiếp nhận State mới và render ra giao diện.
+    - trên View thì Users sẽ click vào nút sự kiện (tạo baiviet chẳng hạn) thì Action sẽ được dispatch (chuyển) đến Reducer để xử lý.
+    - trong Reducer, sẽ tạo 1 Global State (state chứa tất cả baiviet) -> để xử lý từng Action thì use lệnh điều kiện (if/else - switch/case) trỏ đến các type tương ứng trong Actions => xử lý xong => trả ra State mới.
+    - Reducer sẽ connect với Store cần combine tất cả reducer lại => chuyển State mới ra View
+    - View tiếp nhận State mới và render ra giao diện.
 
 📌 Nguyên lý của Redux
-    + State sẽ lưu thành 1 Object.
-    + State is read-only : Cpt chỉ đọc State chứ không được change trực tiếp ở bên ngoài.
-    + Muốn change State phải dùng Pure Function.
+    - State sẽ lưu thành 1 Object.
+    - State is read-only : Cpt chỉ đọc State chứ không được change trực tiếp ở bên ngoài.
+    - Muốn change State phải dùng Pure Function.
 
 
 📌 Khi nào dùng Redux ❓❓❓
-    ==> Dữ liệu được sử dụng ở nhiều nơi.
-    ==> Cần cache dữ liệu để tái sử dụng cho những lần sau (vd: Cpt A fetch API về, mà Cpt C,D cần use dữ liệu API đó thì không cần fetch nữa mà lên redux lấy về dùng).
+    => Dữ liệu được sử dụng ở nhiều nơi.
+    => Cần cache dữ liệu để tái sử dụng cho những lần sau (vd: Cpt A fetch API về, mà Cpt C,D cần use dữ liệu API đó thì không cần fetch nữa mà lên redux lấy về dùng).
 
 
 ### GHI NHỚ
