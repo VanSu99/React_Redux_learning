@@ -42,14 +42,18 @@
     -> sẽ định nghĩa 2 thuộc tính: 
         + type : 'tên_action' -> kiểu mô tả action 👉 type là hằng số nên sẽ tách ra 1 file riêng: actionsType (trong file này chứa tên các type của action) bỏ trong folder constants. 
         + payload : có thể là bất cứ thứ gì, nó sẽ được sử dụng để thay đổi global state của application.
-            🍣 VD:  {
-                        type: 'ADD_ARTICLE',
-                        payload: {
-                            title: 'Bai viet 1',
-                            description: 'abcasdhodaido'
-                        }
-                    }
+            🍣 Ví dụ minh họa:  
+            
+            {
+                 type: 'ADD_ARTICLE',
+                 payload: {
+                    title: 'Bai viet 1',
+                    description: 'abcasdhodaido'
+                 }
+            }
+                
     **Action Creator** chính là tham số truyền vào của Action.
+    
 👉 Action creator sẽ trả về một object với type và payload.
 
 ==> Nếu có 1 action thì sẽ có 1 reducer tương ứng.
@@ -74,7 +78,9 @@
 ✌️ Ta sẽ dùng một thư viện trung gian đó là react-redux -> Library này sẽ take care việc connect component và store để biết được khi nào component được update.
 
 📌 Connect vào Redux tu ReactJS Component❓
+
 ✌️ Voi Class Component: dung HOC connect()
+
 ✌️ Voi Functional Component: dung hooks useSelector() va useDispatch()
     🍣 useSelector() : lay state trong Redux store ra use trong Component.
         + tham số đầu tiên của function chính là store state.
