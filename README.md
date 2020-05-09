@@ -55,6 +55,7 @@
 ==> Nếu có 1 action thì sẽ có 1 reducer tương ứng.
 
 🍣 Ví dụ minh họa: 
+
     ------------------------------------------------------
     |   + actions                                        |
     |           |__ hobby.js                             |
@@ -62,6 +63,7 @@
     |   + reducers                                       |   
     |           |__ hobby.js                             |
     ------------------------------------------------------
+
 
 📌 Lam sao de Component trong ReactJS co the su dung Store voi Redux❓
 
@@ -110,6 +112,7 @@
 ### GHI NHỚ
 
 📌 Redux Store nên connect với Cpt nào xử lý logic.
+
 📌 Reducers chỉ xử lý logic liên quan đến State mà thôi.
 
 ### Bổ Sung Kiến Thức
